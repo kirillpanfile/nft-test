@@ -58,12 +58,19 @@ const fetchMoreCards = async () => {
 </script>
 
 <template>
-  <main class="max-w-2xl mx-auto mt-24">
+  <main class="max-w-2xl mx-auto mt-24 px-12">
     <h1 class="text-3xl font-semi">My collections</h1>
     <p class="mb-8">Lorem ipsum dolor sit, amet consectetur</p>
 
-    <section class="grid grid-cols-2 items-center justify-around gap-7 mb-12">
-      <Card v-for="nft in cards" :key="nft.id" :nft="nft" />
+    <section
+      class="grid md:grid-cols-2 items-center justify-around gap-7 mb-12 grid-cols-1"
+    >
+      <Card
+        v-for="nft in cards"
+        :key="nft.id"
+        :nft="nft"
+        class="mx-auto md:mx-0"
+      />
     </section>
 
     <div class="w-full relative mb-12">
